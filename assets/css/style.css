@@ -1,0 +1,10 @@
+/* Minimal styling, will update this */
+.jumbotron {
+  text-align: center;
+}
+
+.container-footer {
+  font-size: 8;
+  text-align: center;
+  color: grey;
+}
