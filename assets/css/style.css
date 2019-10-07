@@ -1,6 +1,6 @@
-/* Minimal styling, will update this */
 .jumbotron {
-  text-align: center;
+  padding: 0;
+  background-color: transparent;
 }
 
 .container-footer {
@@ -8,3 +8,34 @@
   text-align: center;
   color: grey;
 }
+
+body {
+  margin: 0; 
+  padding: 0;
+  background-image: url("../images/micro_carbon.png");
+  background-repeat: repeat;
+}
+
+.food-input {
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+}
+
+.movie-input {
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+}
+
+.food-display {
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+}
+
+.movie-display {
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+}
+
+/* .flex-container {
+  display: flex;
+} */

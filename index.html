@@ -13,7 +13,7 @@
     <!-- Link to Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Link to CSS Stylesheet -->
+    <!-- Link to CSS Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Link to Bootstrap Javascript CDN -->
@@ -24,8 +24,14 @@
     <!-- Link to jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+    <!-- Link to Animate CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"></script>
+    
+    <!-- Link to Animation Stylesheet -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
     <!-- Link(s) to Javascript Logic will go here -->
-    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src="assets/javascript/style.js"></script>
 
   </head>
 
@@ -33,71 +39,18 @@
     <!-- Header -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4">NETFLIX & CHILL</h1>
-        <h6>| AN APP TO HELP WITH IDEAS FOR DINNER + A MOVIE |</h6>
+        <img src="assets/images/netflix-and-chill_logo.svg" alt="logo" class="netflix-logo" href="#">
       </div>
     </div>
 
     <!-- Card for User Ingredient Input -->
     <div class="container">
-      <div class="card">
-        <div class="card-header">Tell us what's in the fridge.</div>
+      <div class="card food-input" id="food-input">
+        <div class="card-header">What type of food you tryna put away?</div>
         <!-- Card body will hold the form for the user to select/enter input -->
         <div class="card-body">
-            <div class="form-group">
-              <!-- Meat Selection -->
-              <label for="exampleFormControlSelect1">MEAT</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option>Chicken</option>
-                <option>Beef</option>
-                <option>Pork</option>
-                <option>Lamb</option>
-                <option>None</option>
-              </select>
-            </div>
-            <!-- Grain Selection -->
-            <div class="form-group">
-              <label for="exampleFormControlSelect2">GRAIN</label>
-              <select class="form-control" id="exampleFormControlSelect2">
-                <option>Rice</option>
-                <option>Bread (Any Variety)</option>
-                <option>Corn</option>
-                <option>Soybean</option>
-                <option>None</option>
-              </select>
-            </div>
-            <!-- Vegetable Selection -->
-            <div class="form-group">
-              <label for="exampleFormControlSelect3">VEGETABLE</label>
-              <select class="form-control" id="exampleFormControlSelect3">
-                <option>Broccoli</option>
-                <option>Asparagus</option>
-                <option>Brussel Sprouts</option>
-                <option>Cabbage</option>
-                <option>None</option>
-              </select>
-            </div>
-            <!-- Fruit Selection -->
-            <div class="form-group">
-              <label for="exampleFormControlSelect4">FRUIT</label>
-              <select class="form-control" id="exampleFormControlSelect4">
-                <option>Apple</option>
-                <option>Plantain</option>
-                <option>Lemon</option>
-                <option>Grapes</option>
-                <option>None</option>
-              </select>
-            </div>
-            <!-- Dairy Selection -->
-            <div class="form-group">
-              <label for="exampleFormControlSelect5">DAIRY</label>
-              <select class="form-control" id="exampleFormControlSelect5">
-                <option>Milk</option>
-                <option>Cheese (Any Variety)</option>
-                <option>None</option>
-              </select>
-            </div>
-          <button type="search" class="btn btn-secondary">Search</button>
+          <!-- Buttons go here -->
+          <button type="search" class="btn btn-secondary" id="food-submit-btn">Search</button>
           <button type="clear" class="btn btn-secondary">Clear Search</button> 
         </div>
       </div>
@@ -107,8 +60,8 @@
 
     <!-- Card for User Movie Input -->
     <div class="container">
-      <div class="card">
-        <div class="card-header">What genre of movie are you in the mood for?</div>
+      <div class="card movie-input" id="movie-input">
+        <div class="card-header">What movie are you in the mood for?</div>
         <!-- Card body will hold the form for the user to select/enter input -->
         <div class="card-body">
           <div class="form-group">
@@ -122,7 +75,7 @@
               <option>5</option>
             </select>
           </div>
-          <button type="search" class="btn btn-secondary">Search</button>
+          <button type="search" class="btn btn-secondary" id="movie-submit-btn">Search</button>
           <button type="clear" class="btn btn-secondary">Clear Search</button> 
         </div>
       </div>
@@ -131,30 +84,47 @@
     <br>
     
     <!-- Empty Containers for our 5 recipe suggestions -->
-    <div class="container-recipes">
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <button href="#" class="btn btn-secondary">Details</button>
+    <div class="flex-container food-display" id="food-display">
+      <div class="card-header">
+        <div>Get some [kitchen] action using one of these recipes.</div>
+      </div>
+      <div class="card-body">
+        <div class="container-recipes">
+          <div class="card"  style="width: 18rem;">
+            <!-- <img src="#" class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="card-title">Recipe Title</h5>
+              <p class="card-text">Quick blurb about the recipe.</p>
+              <button href="#" class="btn btn-secondary">Details</button>
+            </div>
+          </div>
         </div>
       </div>
+      
     </div>
+    
 
     <br>
 
     <!-- Empty Containers for our 5 movie suggestions -->
-    <div class="container-movies">
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <button href="#" class="btn btn-secondary">Details</button>
+    <div class="flex-container movie-display" id="movie-display">
+      <div class="card-header">
+        <div>Here is the cinematic experience you've been looking for.</div>
+      </div>
+      <div class="card-body">
+        <div class="container-movies">
+          <div class="card" style="width: 18rem;">
+            <!-- <img src="#" class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button href="#" class="btn btn-secondary">Details</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    
 
     <hr>
 
