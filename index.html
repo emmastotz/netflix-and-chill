@@ -21,7 +21,7 @@
 
     <!-- Link to CSS Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="movie_assets/CSS/style.css">
+   
 
     <!-- Link to jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -32,7 +32,8 @@
     <!-- Link(s) to Javascript Logic will go here -->
     <script type="text/javascript" src="movie_assets/JS/movie.js"></script>
     <script type="text/javascript" src="assets/javascript/style.js"></script>
-
+    <script type="text/javascript" src="food_assets/food.js"></script>
+    
   </head>
 
   <body>
@@ -50,10 +51,8 @@
       <div class="card food-input" id="food-input">
         <div class="card-header">What's the food mood?</div>
         <!-- Card body will hold the form for the user to select/enter input -->
-        <div class="card-body">
+        <div class="card-body" id="buttons-view">
           <!-- JS Buttons go here -->
-          <button type="search" class="btn btn-secondary" id="food-submit-btn">Search</button>
-          <button type="clear" class="btn btn-secondary">Clear Search</button> 
         </div>
       </div>
     </div>
@@ -94,8 +93,7 @@
           <div class="card"  style="width: 18rem;">
             <!-- <img src="#" class="card-img-top" alt="..."> -->
             <div class="card-body recipe">
-              <h5 class="card-title">Recipe Title</h5>
-              <p class="card-text">Quick blurb about the recipe.</p>
+              
               <button href="#" class="btn btn-secondary">Details</button>
               <button href="#" class="btn btn-secondary">Save</button>
             </div>
