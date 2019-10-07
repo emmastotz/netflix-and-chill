@@ -1,10 +1,102 @@
-/* Minimal styling, will update this */
+/* Animation for Logo */
+@keyframes logo {
+  from {
+    opacity: 0;
+    width: 100%;
+    height: auto;
+  }
+  to {
+    opacity: 1;
+    width: 50%;
+    height: auto;
+  }
+}
+
+.fadeIn {
+  animation-name: logo;
+}
+
+.netflix-logo {
+  width: 50%; 
+  height: auto;
+  margin-top: 5%;
+  animation-name: logo;
+  animation-duration: 7s;
+}
+/* End animation for logo */
+
 .jumbotron {
+  padding: 0;
+  background-color: transparent;
   text-align: center;
 }
 
 .container-footer {
-  font-size: 8;
+  font-size: 6;
   text-align: center;
-  color: grey;
+  color: rgba(128, 128, 128, 0.3);
+  padding-bottom: 1%;
+}
+
+body {
+  margin: 0; 
+  padding: 0;
+  background-image: url("../images/micro_carbon.png");
+  background-repeat: repeat;
+  font-family: 'Oswald', sans-serif;
+}
+
+.food-input {
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+}
+
+.movie-input {
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+}
+
+.food-display {
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+}
+
+.movie-display {
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+}
+
+.get-started {
+  text-align: center;
+  color: white;
+}
+
+#solution {
+  font-size: 36pt;
+  margin-top: 2%;
+}
+
+#start {
+  font-size: 16pt;
+  padding-bottom: 1%;
+}
+
+.card-header {
+  text-align: center;
+}
+
+.recipe {
+  background-color:rgba(0, 0, 0, 1);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.movie {
+  background-color:rgba(0, 0, 0, 1);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: rgb(185, 9, 11);
 }
