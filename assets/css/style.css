@@ -1,6 +1,34 @@
+/* Animation for Logo */
+@keyframes logo {
+  from {
+    opacity: 0;
+    width: 100%;
+    height: auto;
+  }
+  to {
+    opacity: 1;
+    width: 50%;
+    height: auto;
+  }
+}
+
+.fadeIn {
+  animation-name: logo;
+}
+
+.netflix-logo {
+  width: 50%; 
+  height: auto;
+  margin-top: 5%;
+  animation-name: logo;
+  animation-duration: 7s;
+}
+/* End animation for logo */
+
 .jumbotron {
   padding: 0;
   background-color: transparent;
+  text-align: center;
 }
 
 .container-footer {
@@ -41,7 +69,6 @@ body {
 .get-started {
   text-align: center;
   color: white;
-  background-color:rgba(0, 0, 0,.5);
 }
 
 #solution {
