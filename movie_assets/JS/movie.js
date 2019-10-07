@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // Clickable event
     
-    $('#search').on('click', function(event){
+    $('#movie-submit-btn').on('click', function(event){
         event.preventDefault();
         console.log("What is your favorite movie")
         var search = $('#searchMovie').val().trim()
@@ -27,13 +27,11 @@ $(document).ready(function(){
             $.each(movies, function(index, movie){
                 console.log(index +" :"+ movie)
                 movieCont +=`
-                <div class="col-md-3">
-                  <div class="movieEdit">
-                    <img src="${movie.Poster}">
-                    <h3>${movie.Title}</h3>
-                    <a onclick="movieSelected('${movie.imdbID}')" id="theMovie" class="btn btn-primary" href="#">Movie Info</a>   
-                  </div>  
-                </div>
+                <div class="movieEdit card">
+                  <img src="${movie.Poster}">
+                  <h3>${movie.Title}</h3>
+                  <a onclick="movieSelected('${movie.imdbID}')" id="theMovie" class="btn btn-primary" href="#">Movie Info</a>   
+                </div>  
                 `;
             });
             $('#movies-output').html(movieCont);

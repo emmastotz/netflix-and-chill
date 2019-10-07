@@ -21,6 +21,7 @@
 
     <!-- Link to CSS Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="movie_assets/CSS/style.css">
 
     <!-- Link to jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -29,6 +30,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"></script>
 
     <!-- Link(s) to Javascript Logic will go here -->
+    <script type="text/javascript" src="movie_assets/JS/movie.js"></script>
     <script type="text/javascript" src="assets/javascript/style.js"></script>
 
   </head>
@@ -71,10 +73,10 @@
 
             <label for="exampleFormControlSelect6">MOVIE TIME!!!</label>
             <form id="searchForm">
-              <input type="text" class="form-control" id="searchMovie" placeholder="Select your moive...">
+              <input type="text" class="form-control" id="searchMovie" placeholder="Select your movie...">
             </form>
           </div>
-          <button type="submit" class="btn btn-secondary" id="search">Search</button>
+          <button type="submit" class="btn btn-secondary" id="movie-submit-btn">Search</button>
           <button type="clear" class="btn btn-secondary" id="clear">Clear Search</button> 
         </div>
       </div>
@@ -105,18 +107,15 @@
 
     <br>
 
-    <!-- Empty Containers for our 5 movie suggestions -->
+    <!-- Empty Containers for our 10 movie suggestions -->
     <div class="flex-container movie-display" id="movie-display">
       <div class="card-header">
         <div>Here is the cinematic experience you've been looking for.</div>
       </div>
       <div class="card-body">
         <div class="container-movies">
-          <div class="card" style="width: 18rem;">
-            <!-- <img src="#" class="card-img-top" alt="..."> -->
-            <div class="card-body movie">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Quick blurb about the recipe.</p>
+          <div class="card">
+            <div class="card-body movie" id="movies-output">
               <button href="#" class="btn btn-secondary">Details</button>
               <button href="#" class="btn btn-secondary">Save</button>
             </div>

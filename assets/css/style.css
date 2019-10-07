@@ -93,10 +93,17 @@ body {
 
 .movie {
   background-color:rgba(0, 0, 0, 1);
-  text-align: center;
   border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .btn {
   background-color: rgb(185, 9, 11);
+}
+
+.movieEdit {
+  background-color:rgba(0, 0, 0, 1);
+  width: 18rem;
 }
