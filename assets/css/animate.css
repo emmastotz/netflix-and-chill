@@ -26,4 +26,6 @@
   height: auto;
   margin-top: 5%;
   background: fixed;
+  animation-name: fadeIn;
+  animation-duration: 4s;
 }

@@ -14,6 +14,7 @@ body {
   padding: 0;
   background-image: url("../images/micro_carbon.png");
   background-repeat: repeat;
+  font-family: 'Oswald', sans-serif;
 }
 
 .food-input {
@@ -36,6 +37,18 @@ body {
   color: white;
 }
 
-/* .flex-container {
-  display: flex;
-} */
+.get-started {
+  text-align: center;
+  color: white;
+  background-color:rgba(0, 0, 0,.5);
+}
+
+#solution {
+  font-size: 36pt;
+  margin-top: 2%;
+}
+
+#start {
+  font-size: 16pt;
+  padding-bottom: 1%;
+}
