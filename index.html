@@ -15,6 +15,7 @@
 
     <!-- Link to CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="movie_assets/CSS/style.css">
 
     <!-- Link to Bootstrap Javascript CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -25,7 +26,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <!-- Link(s) to Javascript Logic will go here -->
-    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src="movie_assets/JS/movie.js"></script>
 
   </head>
 
@@ -108,22 +109,18 @@
     <!-- Card for User Movie Input -->
     <div class="container">
       <div class="card">
-        <div class="card-header">What genre of movie are you in the mood for?</div>
+        <div class="card-header">What movie are you in the mood for?</div>
         <!-- Card body will hold the form for the user to select/enter input -->
         <div class="card-body">
           <div class="form-group">
             <!-- Movie Genre Selection -->
-            <label for="exampleFormControlSelect6">GENRE</label>
-            <select class="form-control" id="exampleFormControlSelect6">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+            <label for="exampleFormControlSelect6">MOVIE TIME!!!</label>
+            <form id="searchForm">
+              <input type="text" class="form-control" id="searchMovie" placeholder="Select your moive...">
+            </form>
           </div>
-          <button type="search" class="btn btn-secondary">Search</button>
-          <button type="clear" class="btn btn-secondary">Clear Search</button> 
+          <button type="submit" class="btn btn-secondary" id="search">Search</button>
+          <button type="clear" class="btn btn-secondary" id="clear">Clear Search</button> 
         </div>
       </div>
     </div>
@@ -146,14 +143,7 @@
 
     <!-- Empty Containers for our 5 movie suggestions -->
     <div class="container-movies">
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <button href="#" class="btn btn-secondary">Details</button>
-        </div>
-      </div>
+      <div id="movies-output"></div>
     </div>
 
     <hr>
