@@ -10,6 +10,7 @@
 		<!-- Link to CSS Reset -->
     <link rel="stylesheet" href="assets/css/reset.css">
 
+
     <!-- Link to Bootstrap Javascript CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -59,17 +60,22 @@
 
     <!-- Card for User Movie Input -->
     <div class="container">
+
       <div class="card movie-input" id="movie-input">
         <div class="card-header">It's movie time. What are you feelin'?</div>
+
         <!-- Card body will hold the form for the user to select/enter input -->
         <div class="card-body">
           <div class="form-group">
             <!-- Movie Genre Selection -->
-            <label for="exampleFormControlInput1"></label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+
+            <label for="exampleFormControlSelect6">MOVIE TIME!!!</label>
+            <form id="searchForm">
+              <input type="text" class="form-control" id="searchMovie" placeholder="Select your moive...">
+            </form>
           </div>
-          <button type="search" class="btn btn-secondary" id="movie-submit-btn">Search</button>
-          <button type="clear" class="btn btn-secondary">Clear Search</button> 
+          <button type="submit" class="btn btn-secondary" id="search">Search</button>
+          <button type="clear" class="btn btn-secondary" id="clear">Clear Search</button> 
         </div>
       </div>
     </div>
