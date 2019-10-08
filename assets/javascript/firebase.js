@@ -30,20 +30,20 @@ $(document).ready(function(){
   });
 // ==================================================================
   // Login Function
-  $("#submit-userData").on("click", function(event) {
+  $("#login-userData").on("click", function(event) {
     event.preventDefault();
     var username = $("#email-sign-up").val().trim();
     var password = $("#password-sign-up").val().trim();
 
-    for (var i in snapshot.val().user) {
-
-    }
-    
-    database.ref("/user").on("value", function(snapshot) {
-      if (snapshot.child("user").exists()){
-        
-      }
-    });
+    user.once("value")
+      .then(function(snapshot) {
+        snapshot.forEach(function(childSnapshot) {
+          var key = childSnapshot.key;
+          var childData = childSnapshot.val();
+          var childUserName = childData.username;
+          var childPassword = childData.password;
+          console.log(childUserName,childPassword);
+        });
+      });
   });
-
 });

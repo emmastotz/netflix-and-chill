@@ -77,7 +77,7 @@ $(document).ready(function(){
 
   // Looping through the array of recipes
     for (var i = 0; i < recipes.length; i++) {
-      // Then dynamicaly generating buttons for each recipe in the array
+      // Then dynamically generate buttons for each recipe in the array
       var a = $("<button>");
       // Adding a class of recipe-btn to our button
       a.addClass("recipe-btn");
@@ -95,19 +95,18 @@ $(document).ready(function(){
   // This function handles events where a recipe button is clicked
   $("#food-submit-btn").on("click", function(event) {
     event.preventDefault();
-    // This line grabs the input from the textbox
-    var recipe = $(".form-control").val().trim();
-    var recipeLow = recipe.toLowerCase();
+    // This line grabs the input from the text box
+    var recipe = $(".form-control").val().trim().toLowerCase();
 
-    // Adding movie from the textbox to our array
-    recipes.push(recipeLow);
+    // Adding movie from the text box to our array
+    recipes.push(recipe);
 
     // Calling renderButtons which handles the processing of our movie array
     renderButtons();
   });
   // Adding click event listeners to all elements with a class of "recipe-btn"
   $(document).on("click", ".recipe-btn", displayRecipeInfo);
-  // Calling the renderButtons function to display the intial buttons
+  // Calling the renderButtons function to display the initial buttons
   renderButtons();
 });
 // ================================================================

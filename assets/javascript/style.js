@@ -16,7 +16,7 @@ $(document).ready(function(){
     $(".container-user-info").show();
     $(".container-userData").hide();
 
-    $(".recipe-btn").on("click", function(event){
+    $(document).on("click", ".recipe-btn", function(event){
       $(".get-started").hide();
       $("#food-input").hide();
       $("#movie-input").show();
