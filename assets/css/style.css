@@ -21,7 +21,7 @@
   height: auto;
   margin-top: 5%;
   animation-name: logo;
-  animation-duration: 7s;
+  animation-duration: 5s;
 }
 /* End animation for logo */
 
@@ -89,6 +89,9 @@ body {
   background-color:rgba(0, 0, 0, 1);
   text-align: center;
   border-radius: 5px;
+  /* display: flex;
+  flex-wrap: wrap;
+  width: 100%; */
 }
 
 .movie {
@@ -101,9 +104,16 @@ body {
 
 .btn {
   background-color: rgb(185, 9, 11);
+  margin-left: 1%;
 }
 
 .movieEdit {
   background-color:rgba(0, 0, 0, 1);
   width: 18rem;
+}
+
+.container-userData {
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+  padding: 1%;
 }

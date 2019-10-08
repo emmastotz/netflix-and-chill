@@ -30,7 +30,7 @@ $(document).ready(function(){
                 <div class="movieEdit card">
                   <img src="${movie.Poster}">
                   <h3>${movie.Title}</h3>
-                  <a onclick="movieSelected('${movie.imdbID}')" id="theMovie" class="btn btn-primary" href="#">Movie Info</a>   
+                  <a onclick="movieSelected('${movie.imdbID}')" id="theMovie" class="btn btn-secondary" href="#">Movie Info</a>   
                 </div>  
                 `;
             });
