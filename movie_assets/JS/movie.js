@@ -7,7 +7,6 @@ $(document).ready(function(){
         var search = $('#searchMovie').val().trim()
         console.log('Tell me you favorite movie:    ', search)
         getSubject(search);
-       
     });
     });
     
@@ -27,10 +26,9 @@ $(document).ready(function(){
             $.each(movies, function(index, movie){
                 console.log(index +" :"+ movie)
                 movieCont +=`
-                <div class="movieEdit card">
-                  <img src="${movie.Poster}">
-                  <h3>${movie.Title}</h3>
-                  <a onclick="movieSelected('${movie.imdbID}')" id="theMovie" class="btn btn-secondary" href="#">Movie Info</a>   
+                <div class="movieEdit card-body">
+                    <img src="${movie.Poster}">
+                    <a onclick="movieSelected('${movie.imdbID}')" id="theMovie" class="btn btn-secondary" href="#">Movie Info</a>   
                 </div>  
                 `;
             });
@@ -60,10 +58,10 @@ $(document).ready(function(){
             console.log(movie);
             var movieChoice =`
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <img src="${movie.Poster}" class="thumbnail">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <h2>${movie.Title}</h2>
                         <ul class="list-group">
                         <li class="list-group-item"><strong>Genre:</strong> ${movie.Genre}</li>
@@ -76,7 +74,7 @@ $(document).ready(function(){
                         </ul>
               </div>
               <div class="col-md-8">
-                <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-primary">View IMDB</a>
+                <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-secondary">View IMDB</a>
               </div>
             </div>
           `;

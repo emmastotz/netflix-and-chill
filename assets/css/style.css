@@ -105,6 +105,7 @@ body {
 .btn {
   background-color: rgb(185, 9, 11);
   margin-left: 1%;
+  margin-top: 1%;
 }
 
 .movieEdit {
@@ -112,8 +113,49 @@ body {
   width: 18rem;
 }
 
+.movieEdit img {
+  max-height: 400px;
+}
+
 .container-userData {
   background-color:rgba(0, 0, 0,.5);
   color: white;
   padding: 1%;
 }
+
+.container-recipes .card {
+  flex-direction: row;
+  vertical-align: top;
+  background-color:rgba(0, 0, 0, 1);
+  outline: 1px white;
+}
+
+.food-display .container-recipes h3.recipe-title {
+  height: 70px;
+  text-align: center;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.food-input-group {
+  margin: 1%;
+}
+
+#clear-food {
+  margin-right: 1%;
+  margin-top: 0;
+  height: 40px;
+}
+
+#food-submit-btn {
+  margin-top: 0;
+  height: 40px;
+}
+
+
+
+/* button display: block */
+/* movie titles: truncate after x number of characters */
+/*  */
