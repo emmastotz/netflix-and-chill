@@ -1,29 +1,49 @@
-var config = {
-  apiKey: "AIzaSyDIegJe2UhHCr7-CI5NhvkJ4AsGh5zFwIM",
-  authDomain: "netflix-and-chill-41f4b.firebaseapp.com",
-  databaseURL: "https://netflix-and-chill-41f4b.firebaseio.com",
-  projectId: "netflix-and-chill-41f4b",
-  storageBucket: "",
-  messagingSenderId: "317026206291",
-  appId: "1:317026206291:web:5a32074206fc16e94fbca6"
-}
+$(document).ready(function(){
+  var config = {
+    apiKey: "AIzaSyDIegJe2UhHCr7-CI5NhvkJ4AsGh5zFwIM",
+    authDomain: "netflix-and-chill-41f4b.firebaseapp.com",
+    databaseURL: "https://netflix-and-chill-41f4b.firebaseio.com",
+    projectId: "netflix-and-chill-41f4b",
+    storageBucket: "",
+    messagingSenderId: "317026206291",
+    appId: "1:317026206291:web:5a32074206fc16e94fbca6"
+  }
+  
+  firebase.initializeApp(config);
+  var database = firebase.database();
+  var user = database.ref("/user");
+// ==================================================================
+  // Sign-Up Function
+  $("#submit-userData").on("click", function(event) {
+    event.preventDefault();
+    var username = $("#email-sign-up").val().trim();
+    var password = $("#password-sign-up").val().trim();
+  
+    console.log("Username: " + username);
+    console.log("Password: " + password);  
+  
+    var userData = {
+      username: username,
+      password: password
+    };
+    user.push(userData);
+  });
+// ==================================================================
+  // Login Function
+  $("#submit-userData").on("click", function(event) {
+    event.preventDefault();
+    var username = $("#email-sign-up").val().trim();
+    var password = $("#password-sign-up").val().trim();
 
-firebase.initializeApp(config);
-var database = firebase.database;
-var user = database.ref("/userData");
+    for (var i in snapshot.val().user) {
 
-$("#submit-userData").on("click", function(event) {
-  event.preventDefault();
-  var username = $("#email-sign-up").val().trim();
-  var password = $("#password-sign-up").val().trim();
-
-  console.log("Username: " + username);
-  console.log("Password: " + password);  
-
-  var userData = {
-    username: username,
-    password: password
-  };
-  database.push(userData);
+    }
+    
+    database.ref("/user").on("value", function(snapshot) {
+      if (snapshot.child("user").exists()){
+        
+      }
+    });
+  });
 
 });

@@ -45,6 +45,26 @@ $(document).ready(function(){
       $(".container-user-info").hide();
       $(".container-userData").show();
     });
+
+    $(".login").on("click", function(event) {
+      $(".get-started").hide();
+      $("#food-input").hide();
+      $("#movie-input").hide();
+      $("#food-display").hide();
+      $("#movie-display").hide();
+      $(".container-user-info").hide();
+      $(".container-userData").show();
+    });
+
+    $("#submit-userData").on("click", function(event) {
+      $(".get-started").hide();
+      $("#food-input").show();
+      $("#movie-input").hide();
+      $("#food-display").hide();
+      $("#movie-display").hide();
+      $(".container-user-info").show();
+      $(".container-userData").hide();
+    })
   });
 });
 
