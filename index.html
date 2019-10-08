@@ -38,6 +38,7 @@
     <script type="text/javascript" src="assets/javascript/firebase.js"></script>
     <script type="text/javascript" src="food_assets/food.js"></script>
     
+    
   </head>
 
   <body>
@@ -56,12 +57,12 @@
         <div class="card-header">What's the food mood?</div>
         <!-- Card body will hold the form for the user to select/enter input -->
         <div class="input-group mb-3">
-          <div class="input-group-prepend">
+          <div class="food-input-group">
             <span class="input-group-food" id="inputGroup-sizing-default">Add Food Type: </span>
           </div>
           <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           <button type="submit" class="btn btn-secondary" id="food-submit-btn">Add</button>
-          <button type="clear" class="btn btn-secondary" id="clear">Clear</button> 
+          <button type="clear" class="btn btn-secondary" id="clear-food">Clear</button> 
         </div>
         <div class="card-body" id="buttons-view">
           <!-- JS Buttons go here -->
@@ -83,11 +84,11 @@
             <!-- Movie Genre Selection -->
             <label for="exampleFormControlSelect6"></label>
             <form id="searchForm">
-              <input type="text" class="form-control" id="searchMovie" placeholder="Select your movie...">
+              <input type="text" class="form-control" id="searchMovie" value="love" placeholder="Select your movie...">
             </form>
           </div>
           <button type="submit" class="btn btn-secondary" id="movie-submit-btn">Search</button>
-          <button type="clear" class="btn btn-secondary" id="clear">Clear Search</button> 
+          <button type="clear" class="btn btn-secondary" id="clear-movie">Clear Search</button> 
         </div>
       </div>
     </div>
@@ -95,17 +96,14 @@
     <br>
     
     <!-- Empty Containers for our 10 recipe suggestions -->
-    <div class="flex-container food-display" id="food-display">
+    <div class="container food-display" id="food-display">
       <div class="card-header">
         <div>Get some [kitchen] action using one of these recipes.</div>
       </div>
       <div class="card-body">
-        <div class="container-recipes">
-          <div class="card"  style="width: 18rem;">
-            <div class="card-body recipe">
-              <!-- Recipe will go here -->
-            </div>
-          </div>
+        <div class="container container-recipes">
+
+        </div>
         </div>
       </div>
       
@@ -114,7 +112,7 @@
     <br>
 
     <!-- Empty Containers for our 10 movie suggestions -->
-    <div class="flex-container movie-display" id="movie-display">
+    <div class="container movie-display" id="movie-display">
       <div class="card-header">
         <div>Here is the cinematic experience you've been looking for.</div>
       </div>

@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var recipes = ["italian","french","seafood","vegetarian","keto","mexican","mediterranean","chinese","thai","indian","ethiopian","japanese"];
   // ================================================================  
-  $(document).on("click", ".recipe-btn", function(event){
+  function displayRecipeInfo(){
     // Use this variable to store whatever we should send to the api as the search info
     var mealButtonSelected = $(this).attr("data-name");
     
@@ -20,13 +20,12 @@ $(document).ready(function(){
       console.log(response.hits);
       // Create a variable for the div that holds all the individual recipe divs
       var allRecipesDiv = $(".container-recipes");
+      var recipeRowDiv = $("<div>");
+      recipeRowDiv.addClass("row card");
       // All recipes returned by the search are stored in response.hits
       var allRecipes = response.hits;
       // Loop through all recipes and get the info we need for each one
       for(var i = 0; i < allRecipes.length; i++){
-        var recipeColDiv = $("<div>");
-        // recipeColDiv.addClass("col-4");
-
         // Variable to hold the recipe label
         var recipeLabel = allRecipes[i].recipe.label;
         // Variable to hold the recipe image
@@ -35,40 +34,41 @@ $(document).ready(function(){
         var recipeUrl = allRecipes[i].recipe.url;
 
         // Create div for this specific recipe
-        var recipeDiv = $("<div>");
-        recipeDiv.addClass("col-4");
+        var recipeColDiv = $("<div>");
+        recipeColDiv.addClass("card-body col-4 recipe");
 
         // Create an H4 tag for the recipe title/label
-        var recipeTitle = $("<h4>");
+        var recipeTitle = $("<h3>");
+        recipeTitle.addClass("recipe-title");
         recipeTitle.text(recipeLabel);
 
         // Create an image tag for the recipe
         var recipeImage = $("<img>");
+        recipeImage.addClass("card-img-top");
         recipeImage.attr("src", thisRecipeImage);
 
         // Create a button that holds the recipe url
-        var recipeDetails = $("<button>");
-        var recipeA = $("<a>");
-        recipeA.attr("href", recipeUrl);
-        recipeDetails.addClass("btn btn-secondary");
+        var recipeDetails = $("<a>");
+        recipeDetails.addClass("btn btn-secondary details");
+        recipeDetails.attr("href", recipeUrl);
+        recipeDetails.attr("role", "button");
         recipeDetails.text("Details");
-        recipeA.append(recipeDetails);
 
         // Create a button that will allow the user to save the recipe
         var recipeSave = $("<button>");
         recipeSave.addClass("btn btn-secondary save");
         recipeSave.text("Save");
 
-        recipeDiv.append(recipeTitle);
-        recipeDiv.append(recipeImage);
-        recipeDiv.append(recipeDetails);
-        recipeDiv.append(recipeSave);
+        recipeColDiv.append(recipeTitle);
+        recipeColDiv.append(recipeImage);
+        recipeColDiv.append(recipeDetails);
+        recipeColDiv.append(recipeSave);
 
-        recipeDiv.append(recipeColDiv);
-        allRecipesDiv.append(recipeDiv);
+        recipeRowDiv.append(recipeColDiv);
+        allRecipesDiv.append(recipeRowDiv);
       } 
     });
-  });
+  }
   // ================================================================
   // Function for displaying recipe data
   function renderButtons() {
@@ -105,7 +105,8 @@ $(document).ready(function(){
     // Calling renderButtons which handles the processing of our movie array
     renderButtons();
   });
-
+  // Adding click event listeners to all elements with a class of "recipe-btn"
+  $(document).on("click", ".recipe-btn", displayRecipeInfo);
   // Calling the renderButtons function to display the intial buttons
   renderButtons();
 });
