@@ -9,3 +9,21 @@ var config = {
 }
 
 firebase.initializeApp(config);
+var database = firebase.database;
+var user = database.ref("/userData");
+
+$("#submit-userData").on("click", function(event) {
+  event.preventDefault();
+  var username = $("#email-sign-up").val().trim();
+  var password = $("#password-sign-up").val().trim();
+
+  console.log("Username: " + username);
+  console.log("Password: " + password);  
+
+  var userData = {
+    username: username,
+    password: password
+  };
+  database.push(userData);
+
+});
