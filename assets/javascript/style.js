@@ -9,7 +9,6 @@ $(document).ready(function() {
   $(".saved-items-container").hide();
 
   $(document).on("click", ".recipe-btn", function(event){
-    // $(".get-started").hide();
     $("#food-input").hide();
     $("#movie-input").show();
     $("#food-display").hide();
@@ -19,21 +18,8 @@ $(document).ready(function() {
     $(".container-login").hide();
     $(".saved-items-container").hide();
   });
-    
-  $("#movie-submit-btn").on("click", function(event){
-    // $(".get-started").hide();
-    $("#food-input").hide();
-    $("#movie-input").hide();
-    $("#food-display").show();
-    $("#movie-display").show();
-    $(".container-user-info").show();
-    $(".container-sign-up").hide();
-    $(".container-login").hide();
-    $(".saved-items-container").hide();
-  });
 
   $("#back").on("click", function(event){
-    // $(".get-started").hide();
     $("#food-input").hide();
     $("#movie-input").hide();
     $("#food-display").show();
@@ -46,7 +32,6 @@ $(document).ready(function() {
 
   // Sign Up ================================
   $(".sign-up").on("click", function(event) {
-    // $(".get-started").hide();
     $("#food-input").hide();
     $("#movie-input").hide();
     $("#food-display").hide();
@@ -58,7 +43,6 @@ $(document).ready(function() {
   });
 
   $("#submit-sign-up").on("click", function(event) {
-    // $(".get-started").hide();
     $("#food-input").show();
     $("#movie-input").hide();
     $("#food-display").hide();
@@ -71,7 +55,6 @@ $(document).ready(function() {
 
   // Log In ================================
   $(".login").on("click", function(event) {
-    // $(".get-started").hide();
     $("#food-input").hide();
     $("#movie-input").hide();
     $("#food-display").hide();
@@ -83,7 +66,6 @@ $(document).ready(function() {
   });
   
   $("#submit-login").on("click", function(event) {
-    // $(".get-started").hide();
     $("#food-input").hide();
     $("#movie-input").hide();
     $("#food-display").hide();
