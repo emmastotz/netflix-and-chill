@@ -30,13 +30,6 @@
     <!-- Firebase Core JavaScript Link -->
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
-
-    <!-- Links to Javascript Logic will go here -->
-    <script type="text/javascript" src="movie_assets/JS/movie.js"></script>
-    <script type="text/javascript" src="assets/javascript/style.js"></script>
-    <script type="text/javascript" src="assets/javascript/firebase.js"></script>
-    <script type="text/javascript" src="food_assets/food.js"></script>
-    
     
   </head>
 
@@ -44,149 +37,18 @@
     <!-- Header -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <img src="assets/images/netflix-and-chill_logo.svg" alt="logo" class="netflix-logo" href="#">
+        <a  src="assets/images/netflix-and-chill_logo.svg" href="home.html">        
+          <img src="assets/images/netflix-and-chill_logo.svg" alt="logo" class="netflix-logo">
+        </a>
       </div>
       <div class="get-started" id="solution">THE DATE NIGHT SOLUTION</div>
       <div class="get-started" id="start">[click the logo to get started]</div>
-    </div>
+    </div>   
 
-    <!-- Card for User Ingredient Input -->
-    <div class="container">
-      <div class="card food-input" id="food-input">
-        <div class="card-header">What's the food mood?</div>
-        <!-- Card body will hold the form for the user to select/enter input -->
-        <div class="input-group mb-3">
-          <div class="food-input-group">
-            <span class="input-group-food" id="inputGroup-sizing-default">Add Food Type: </span>
-          </div>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          <button type="submit" class="btn btn-secondary" id="food-submit-btn">Add</button>
-          <button type="clear" class="btn btn-secondary" id="clear-food">Clear</button> 
-        </div>
-        <div class="card-body" id="buttons-view">
-          <!-- JS Buttons go here -->
-        </div>
-      </div>
-    </div>
-    
-    <br>
-
-    <!-- Card for User Movie Input -->
-    <div class="container">
-
-      <div class="card movie-input" id="movie-input">
-        <div class="card-header">It's movie time. What are you feelin'?</div>
-
-        <!-- Card body will hold the form for the user to select/enter input -->
-        <div class="card-body">
-          <div class="form-group">
-            <!-- Movie Genre Selection -->
-            <label for="exampleFormControlSelect6"></label>
-            <form id="searchForm">
-              <input type="text" class="form-control" id="searchMovie" placeholder="Select your movie...">
-            </form>
-          </div>
-          <button type="submit" class="btn btn-secondary" id="movie-submit-btn">Search</button>
-          <button type="clear" class="btn btn-secondary" id="clear-movie">Clear Search</button> 
-        </div>
-      </div>
-    </div>
-
-    <br>
-    
-    <!-- Empty Containers for our 10 recipe suggestions -->
-    <div class="container food-display" id="food-display">
-      <div class="card-header">
-        <div>Get some [kitchen] action using one of these recipes.</div>
-      </div>
-      <div class="card-body">
-        <div class="container container-recipes"></div>
-      </div>
-    </div>
-
-    <br>
-
-    <!-- Empty Containers for our 10 movie suggestions -->
-    <div class="container movie-display" id="movie-display">
-      <div class="card-header">
-        <div>Here is the cinematic experience you've been looking for.</div>
-      </div>
-      <div class="container-movies">
-        <div class="card">
-          <div class="card-body movie" id="movies-output"></div>
-        </div>
-      </div>
-    </div>    
-
-    <hr>
-
-    <div class="container-user-info">
-      <div class="row ">
-        <div class="col-5"> </div>
-        <div class="col-4">
-          <button class="btn btn-secondary login">Log In</button>
-          <button class="btn btn-secondary sign-up">Sign Up</button>
-        </div>
-        <div class="col-3"></div>
-      </div>
-    </div>
-
-    <!-- Sign-Up Container -->
-    <div class="container container-sign-up">
-      <form>
-        <div class="form-group">
-          <label for="email-sign-up">Email address</label>
-          <input type="email" class="form-control" id="email-sign-up" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="password-sign-up">Password</label>
-          <input type="password" class="form-control" id="password-sign-up" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary" id="submit-sign-up">Submit</button>
-      </form>
-    </div>
-
-    <!-- Login Container -->
-    <div class="container container-login">
-      <form>
-        <div class="form-group">
-          <label for="email-login">Email address</label>
-          <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="password-login">Password</label>
-          <input type="password" class="form-control" id="password-login" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary" id="submit-login">Login</button>
-      </form>
-    </div>
-
-    <!-- Saved Items Container -->
-    <div class="container saved-items-container">
-      <div class="container">
-        <div class="row recipe-row">
-          <!-- Saved Recipes Display Here -->
-        </div>
-      </div>
-      <div class="container">
-        <div class="row movie-row">
-          <!-- Saved Movies Display Here -->
-        </div>
-      </div>
-    </div>
-    
-    <hr>
-
-    <div class="container-footer">
-      <div class="row footer">
-        <div class="col-4"> </div>
-        <div class="col-4">CREATED BY AFOMIA, EMMA, RICHARD & SID</div>
-        <div class="col-4"> </div>
-      </div>
-    </div>
-    
+    <!-- Links to Javascript Logic will go here -->
+    <script type="text/javascript" src="movie_assets/JS/movie.js"></script>
+    <script type="text/javascript" src="assets/javascript/firebase.js"></script>
+    <script type="text/javascript" src="food_assets/food.js"></script>
 
   </body>
 </html>

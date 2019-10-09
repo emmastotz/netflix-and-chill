@@ -39,6 +39,19 @@
   animation-duration: 5s;
 }
 
+.logo-container {
+  text-align: center;
+  color: white;
+  margin-bottom: 2%;
+}
+
+#little-netflix-logo {
+  width: 25%; 
+  height: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
 .jumbotron {
   padding: 0;
   background-color: transparent;
