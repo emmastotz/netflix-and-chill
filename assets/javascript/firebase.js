@@ -65,6 +65,7 @@ $(document).ready(function(){
   });
 // ==================================================================
   // Save Recipes Function
+
   $(document).on("click", ".save", function(event){
 
     var title = $(this).siblings('h3').text();
@@ -84,6 +85,7 @@ $(document).ready(function(){
 // ==================================================================
   // Save Movies Function
   $(document).on("click", ".save-movie", function(event){
+
 
     var img = $(this).siblings('img').attr("src");
 

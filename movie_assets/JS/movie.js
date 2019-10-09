@@ -10,9 +10,25 @@ $(document).ready(function(){
   $('#movie-submit-btn').on('click', function(event){
       event.preventDefault();
       // console.log("What is your favorite movie")
-      var search = $('#searchMovie').val().trim()
+      var search = $('#searchMovie').val().trim();
+      
+      if (search === "" || search === null) {
+        console.log("Invalid Input");
+        return;
+      } else {
+        console.log("Valid Input");
+        $("#food-input").hide();
+        $("#movie-input").hide();
+        $("#food-display").show();
+        $("#movie-display").show();
+        $(".container-user-info").show();
+        $(".container-sign-up").hide();
+        $(".container-login").hide();
+        $(".saved-items-container").hide();
+        getSubject(search);
+      }
       // console.log('Tell me you favorite movie:    ', search)
-      getSubject(search);
+      
   });
 });
 // ============================================================    
