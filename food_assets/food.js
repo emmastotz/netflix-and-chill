@@ -22,6 +22,8 @@ $(document).ready(function(){
       var allRecipesDiv = $(".container-recipes");
       var recipeRowDiv = $("<div>");
       recipeRowDiv.addClass("row card");
+      recipeRowDiv.attr("id","food-container");
+
       // All recipes returned by the search are stored in response.hits
       var allRecipes = response.hits;
       // Loop through all recipes and get the info we need for each one

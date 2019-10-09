@@ -5,16 +5,20 @@ $(document).ready(function(){
   $("#food-display").hide();
   $("#movie-display").hide();
   $(".container-user-info").hide();
-  $(".container-userData").hide();
+  $(".container-sign-up").hide();
+  $(".container-login").hide();
+  $(".saved-items-container").hide();
 
-  $(".netflix-logo").on("click", function(event){
+  $(".netflix-logo").on("click", function(event) {
     $(".get-started").hide();
     $("#food-input").show();
     $("#movie-input").hide();
     $("#food-display").hide();
     $("#movie-display").hide();
     $(".container-user-info").show();
-    $(".container-userData").hide();
+    $(".container-sign-up").hide();
+    $(".container-login").hide();
+    $(".saved-items-container").hide();
 
     $(document).on("click", ".recipe-btn", function(event){
       $(".get-started").hide();
@@ -23,7 +27,9 @@ $(document).ready(function(){
       $("#food-display").hide();
       $("#movie-display").hide();
       $(".container-user-info").show();
-      $(".container-userData").hide();
+      $(".container-sign-up").hide();
+      $(".container-login").hide();
+      $(".saved-items-container").hide();
     });
       
     $("#movie-submit-btn").on("click", function(event){
@@ -33,9 +39,24 @@ $(document).ready(function(){
       $("#food-display").show();
       $("#movie-display").show();
       $(".container-user-info").show();
-      $(".container-userData").hide();
+      $(".container-sign-up").hide();
+      $(".container-login").hide();
+      $(".saved-items-container").hide();
     });
 
+    $("#back").on("click", function(event){
+      $(".get-started").hide();
+      $("#food-input").hide();
+      $("#movie-input").hide();
+      $("#food-display").show();
+      $("#movie-display").show();
+      $(".container-user-info").show();
+      $(".container-sign-up").hide();
+      $(".container-login").hide();
+      $(".saved-items-container").hide();
+    });
+
+    // Sign Up ================================
     $(".sign-up").on("click", function(event) {
       $(".get-started").hide();
       $("#food-input").hide();
@@ -43,9 +64,24 @@ $(document).ready(function(){
       $("#food-display").hide();
       $("#movie-display").hide();
       $(".container-user-info").hide();
-      $(".container-userData").show();
+      $(".container-sign-up").show();
+      $(".container-login").hide();
+      $(".saved-items-container").hide();
     });
 
+    $("#submit-sign-up").on("click", function(event) {
+      $(".get-started").hide();
+      $("#food-input").show();
+      $("#movie-input").hide();
+      $("#food-display").hide();
+      $("#movie-display").hide();
+      $(".container-user-info").show();
+      $(".container-sign-up").hide();
+      $(".container-login").hide();
+      $(".saved-items-container").hide();
+    })
+
+    // Log In ================================
     $(".login").on("click", function(event) {
       $(".get-started").hide();
       $("#food-input").hide();
@@ -53,18 +89,23 @@ $(document).ready(function(){
       $("#food-display").hide();
       $("#movie-display").hide();
       $(".container-user-info").hide();
-      $(".container-userData").show();
+      $(".container-sign-up").hide();
+      $(".container-login").show();
+      $(".saved-items-container").hide();
     });
-
-    $("#submit-userData").on("click", function(event) {
+    
+    $("#submit-login").on("click", function(event) {
       $(".get-started").hide();
-      $("#food-input").show();
+      $("#food-input").hide();
       $("#movie-input").hide();
       $("#food-display").hide();
       $("#movie-display").hide();
-      $(".container-user-info").show();
-      $(".container-userData").hide();
-    })
+      $(".container-user-info").hide();
+      $(".container-sign-up").hide();
+      $(".container-login").show();
+      $(".saved-items-container").hide();
+    });
+    
   });
 });
 

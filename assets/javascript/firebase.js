@@ -14,7 +14,7 @@ $(document).ready(function(){
   var user = database.ref("/user");
 // ==================================================================
   // Sign-Up Function
-  $("#submit-userData").on("click", function(event) {
+  $("#submit-sign-up").on("click", function(event) {
     event.preventDefault();
     var username = $("#email-sign-up").val().trim();
     var password = $("#password-sign-up").val().trim();
@@ -26,24 +26,61 @@ $(document).ready(function(){
       username: username,
       password: password
     };
+
     user.push(userData);
   });
 // ==================================================================
   // Login Function
-  $("#login-userData").on("click", function(event) {
+  $("#submit-login").on("click", function(event) {
     event.preventDefault();
-    var username = $("#email-sign-up").val().trim();
-    var password = $("#password-sign-up").val().trim();
-
+    
+    var username = $("#email-login").val().trim();
+    var password = $("#password-login").val().trim();
+    
     user.once("value")
-      .then(function(snapshot) {
-        snapshot.forEach(function(childSnapshot) {
-          var key = childSnapshot.key;
-          var childData = childSnapshot.val();
-          var childUserName = childData.username;
-          var childPassword = childData.password;
-          console.log(childUserName,childPassword);
-        });
+    .then(function(snapshot) {
+      snapshot.forEach(function(childSnapshot) {
+        var key = childSnapshot.key;
+        var childData = childSnapshot.val();
+        var childUserName = childData.username;
+        var childPassword = childData.password;
+        console.log("Username and Password: " + childUserName,childPassword);
+
+        if ((childUserName === username) && (childPassword === password)) {
+          console.log("Welcome back " + childUserName);
+          var savedRecipeDiv = $("<div>");
+          savedRecipeDiv.addClass("saved-recipe");
+          // Call on the recipe objects saved in Firebase. Need loop?
+          
+          var savedMovieDiv = $("<div>");
+          savedMovieDiv.addClass("saved-movie");
+          // Call on the movie objects saved in Firebase. Need loop?
+
+          $(".recipe-row").append(savedRecipeDiv);
+          $(".movie-row").append(savedMovieDiv);
+        }
       });
+    });
+    
   });
+// ==================================================================
+  // Save Recipes Function
+  $(".save").on("click", function(event){
+    var recipe = {
+      recipeObject: $(".recipe").val()
+    }
+    console.log("You saved: " + recipe);
+    //user.push(recipe);
+  })
+
+// ==================================================================
+  // Save Movies Function
+  $(".save-movie").on("click", function(event){
+    
+    var movie = {
+      movieObject: $(".movieEdit").val()
+    }
+    console.log("You saved: " + movie);
+    //user.push(movie);
+  })
 });

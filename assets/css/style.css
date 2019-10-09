@@ -2,7 +2,7 @@
 @-webkit-keyframes logo {
   from {
     opacity: 0;
-    width: 100%;
+    width: 75%;
     height: auto;
   }
 
@@ -16,7 +16,7 @@
 @keyframes logo {
   from {
     opacity: 0;
-    width: 100%;
+    width: 75%;
     height: auto;
   }
   to {
@@ -29,6 +29,7 @@
 .fadeIn {
   animation-name: logo;
 }
+/* End animation for logo */
 
 .netflix-logo {
   width: 50%; 
@@ -37,7 +38,6 @@
   animation-name: logo;
   animation-duration: 5s;
 }
-/* End animation for logo */
 
 .jumbotron {
   padding: 0;
@@ -53,8 +53,8 @@
 }
 
 body {
-  /* margin: 0; 
-  padding: 0; */
+  margin: 1%;
+  padding: 1%;
   background-image: url("../images/micro_carbon.png");
   background-repeat: repeat;
   font-family: 'Oswald', sans-serif;
@@ -78,6 +78,7 @@ body {
 .movie-display {
   background-color:rgba(0, 0, 0,.5);
   color: white;
+  padding-bottom: 1.5%;
 }
 
 .get-started {
@@ -103,24 +104,19 @@ body {
   background-color:rgba(0, 0, 0, 1);
   text-align: center;
   border-radius: 5px;
-  /* display: flex;
-  flex-wrap: wrap;
-  width: 100%; */
 }
 
 .movie {
   background-color:rgba(0, 0, 0, 1);
-  border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border: none;
 }
 
 .btn {
   background-color: rgb(185, 9, 11);
   margin-left: 1%;
-  margin-top: 1%;
+  margin-top: 2%;
 }
 
 .movieEdit {
@@ -132,7 +128,17 @@ body {
   max-height: 400px;
 }
 
-.container-userData {
+.movieEdit .btn{
+  display: inline-flex;
+}
+
+.container-sign-up {
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+  padding: 1%;
+}
+
+.container-login {
   background-color:rgba(0, 0, 0,.5);
   color: white;
   padding: 1%;
@@ -169,8 +175,23 @@ body {
   height: 40px;
 }
 
+#food-container {
+  outline: 1px solid white;
+}
 
+#movie-additional-info{
+  background-color:rgba(0, 0, 0,.5);
+  color: white;
+  padding: 2%;
+  border-radius: 5px;
+  text-align: center;
+}
 
-/* button display: block */
-/* movie titles: truncate after x number of characters */
-/*  */
+li.list-group-item {
+  background-color:rgba(0, 0, 0, 1);
+  outline: 1px solid white;
+}
+
+h2 {
+  margin-bottom: 2%;
+}
