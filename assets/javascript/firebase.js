@@ -65,22 +65,35 @@ $(document).ready(function(){
   });
 // ==================================================================
   // Save Recipes Function
-  $(document).on("click", ".save", function(event){    
+
+  $(document).on("click", ".save", function(event){
+
+    var title = $(this).siblings('h3').text();
+
+    var img = $(this).siblings('img').attr("src");
+    console.log(img)
+
     var recipe = {
-      recipeObject: $(".recipe").val()
+      recipeObject: title,
+      recipeImg: img
     }
-    console.log(recipe);
-    //user.push(recipe);
+
+    
+    user.push(recipe);
   })
 
 // ==================================================================
   // Save Movies Function
   $(document).on("click", ".save-movie", function(event){
-    //console.log('click');
+
+
+    var img = $(this).siblings('img').attr("src");
+
+    console.log(img);
     var movie = {
-      movieObject: $(".thumbnail").val()
+      movieObject: img
     }
-    console.log(movie);
-    //user.push(movie);
+
+    user.push(movie);
   })
 });
