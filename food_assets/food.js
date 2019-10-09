@@ -100,11 +100,21 @@ $(document).ready(function(){
     // This line grabs the input from the text box
     var recipe = $(".form-control").val().trim().toLowerCase();
 
-    // Adding movie from the text box to our array
-    recipes.push(recipe);
+    var type = typeof(recipe);
+    var integer = parseInt(type);
+    console.log("Type: " + type);
+    console.log("Int: " + integer);
+
+    if ((type === "string")&&(recipe !== "")) {
+      // Adding movie from the text box to our array
+      recipes.push(recipe);
+      renderButtons();
+    } else {
+      console.log("Invalid input");
+    };
 
     // Calling renderButtons which handles the processing of our movie array
-    renderButtons();
+    
   });
   // Adding click event listeners to all elements with a class of "recipe-btn"
   $(document).on("click", ".recipe-btn", displayRecipeInfo);
