@@ -99,22 +99,37 @@ $(document).ready(function(){
     event.preventDefault();
     // This line grabs the input from the text box
     var recipe = $(".form-control").val().trim().toLowerCase();
+    var boolean1 = false;
+    var x = 0;
+    console.log("Word Captured: " + recipe);
+    console.log(event);
 
-    var type = typeof(recipe);
-    var integer = parseInt(type);
-    console.log("Type: " + type);
-    console.log("Int: " + integer);
+    for (var i = 0; i < recipe.length; i++) {
+      var keyCode = recipe.charCodeAt(i);
 
-    if ((type === "string")&&(recipe !== "")) {
-      // Adding movie from the text box to our array
+      if ((keyCode >= 97 && keyCode <= 122)||keyCode === 32||keyCode === 8) {
+        console.log("Valid");
+        boolean1 = true;
+      } else{
+        console.log("Invalid Input");
+        boolean1 = false;
+      }
+    }
+
+    for (var j = 0; j < recipes.length; j++) {
+      if (recipe == recipes[j]) {
+        x++;
+        console.log("Already exists in array. " + x);
+      } else {
+        console.log("Doesn't exist.");
+      }
+    }
+
+    if ((boolean1 === true) && (x !== 1)) {
       recipes.push(recipe);
       renderButtons();
-    } else {
-      console.log("Invalid input");
-    };
-
-    // Calling renderButtons which handles the processing of our movie array
-    
+    }
+      
   });
   // Adding click event listeners to all elements with a class of "recipe-btn"
   $(document).on("click", ".recipe-btn", displayRecipeInfo);

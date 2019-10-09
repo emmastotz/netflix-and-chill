@@ -1,5 +1,12 @@
 $(document).ready(function(){
   // Clickable event
+  $('form').on('keyup keypress', function(e) {
+    var keyCode = e.keyCode || e.which;
+    if (keyCode === 13) {
+      e.preventDefault();
+      return false;
+    }
+  });
   $('#movie-submit-btn').on('click', function(event){
       event.preventDefault();
       // console.log("What is your favorite movie")
@@ -71,7 +78,7 @@ function getMovie(){
         </div>
         <div class="col-md-6">
           <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-secondary">View IMDB</a>
-          <a href="index.html" target="_blank" class="btn btn-secondary" id="back">Back</a>
+          <a href="home.html" target="_blank" class="btn btn-secondary" id="back">Back</a>
         </div>
       </div>
     </div>
