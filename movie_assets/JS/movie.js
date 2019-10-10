@@ -34,7 +34,7 @@ $(document).ready(function(){
 // ============================================================    
 // pull API from OMBb.Use each loop and template string to append new elements.
 apikey= "47aab339"
-var queryURL = "http://www.omdbapi.com/?apikey=47aab339";
+var queryURL = "https://www.omdbapi.com/?apikey=47aab339";
 function getSubject(search){
   console.log(search);
   $.ajax({
